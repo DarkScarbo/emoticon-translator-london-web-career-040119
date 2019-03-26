@@ -5,7 +5,6 @@ def load_library(path)
   list = {"get_meaning" => {}, "get_emoticon" => {}}
   YAML.load_file(path).each do |k, v|
     list["get_meaning"][v[1]] = k
-    list["get_emoticon"][v[0]] = v[1]
   end
   list
 end
